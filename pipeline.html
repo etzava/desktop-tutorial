@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Έργων</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4b400;
+            color: #fff;
+        }
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pipeline Έργων</h1>
+    <form id="projectForm">
+        <input type="text" id="projectName" placeholder="Όνομα Έργου" required>
+        <input type="number" id="projectAmount" placeholder="Ποσό (€)" required>
+        <input type="number" id="projectProbability" placeholder="Πιθανότητα (%)" required>
+        <button type="submit">Προσθήκη Έργου</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Όνομα Έργου</th>
+                <th>Ποσό (€)</th>
+                <th>Πιθανότητα (%)</th>
+                <th>Ενέργεια</th>
+            </tr>
+        </thead>
+        <tbody id="projectTableBody">
+            <!-- Projects will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById('projectForm');
+        const tableBody = document.getElementById('projectTableBody');
+        let projects = JSON.parse(localStorage.getItem('projects')) || [];
+
+        function renderTable() {
+            tableBody.innerHTML = '';
+            projects.forEach((project, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${project.name}</td>
+                    <td>${project.amount}</td>
+                    <td>${project.probability}</td>
+                    <td><span class="delete-btn" data-index="${index}">Διαγραφή</span></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('projectName').value;
+            const amount = document.getElementById('projectAmount').value;
+            const probability = document.getElementById('projectProbability').value;
+
+            projects.push({ name, amount, probability });
+            localStorage.setItem('projects', JSON.stringify(projects));
+            renderTable();
+            form.reset();
+        });
+
+        tableBody.addEventListener('click', (e) => {
+            if (e.target.classList.contains('delete-btn')) {
+                const index = e.target.getAttribute('data-index');
+                projects.splice(index, 1);
+                localStorage.setItem('projects', JSON.stringify(projects));
+                renderTable();
+            }
+        });
+
+        renderTable();
+    </script>
+</body>
+</html>

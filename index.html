@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Έργων</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, select, button, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4b400;
+            color: #fff;
+        }
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pipeline Έργων</h1>
+    <form id="projectForm">
+        <input type="text" id="projectName" placeholder="Όνομα Έργου" required>
+        <textarea id="projectDescription" placeholder="Περιγραφή Έργου" required></textarea>
+        <input type="text" id="projectClient" placeholder="Πελάτης" required>
+        <input type="number" id="projectAmount" placeholder="Ποσό (€)" required>
+        <input type="number" id="projectProbability" placeholder="Πιθανότητα (%)" required>
+        <input type="date" id="startDate" required>
+        <input type="date" id="endDate" required>
+        <select id="status">
+            <option value="Προσφορά">Προσφορά</option>
+            <option value="Σε Εξέλιξη">Σε Εξέλιξη</option>
+            <option value="Ολοκληρωμένο">Ολοκληρωμένο</option>
+        </select>
+        <input type="text" id="projectManager" placeholder="Υπεύθυνος Έργου" required>
+        <button type="submit">Προσθήκη Έργου</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Όνομα Έργου</th>
+                <th>Περιγραφή</th>
+                <th>Πελάτης</th>
+                <th>Ποσό (€)</th>
+                <th>Πιθανότητα (%)</th>
+                <th>Ημ. Έναρξης</th>
+                <th>Ημ. Λήξης</th>
+                <th>Κατάσταση</th>
+                <th>Υπεύθυνος</th>
+                <th>Ενέργεια</th>
+            </tr>
+        </thead>
+        <tbody id="projectTableBody">
+            <!-- Projects will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="js/pipeline.js"></script>
+</body>
+</html>
