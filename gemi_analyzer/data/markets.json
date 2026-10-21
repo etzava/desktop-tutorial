@@ -1,0 +1,11 @@
+{
+  "_help": "Δικές σας εκτιμήσεις μεγέθους αγοράς ανά πρόθεμα ΚΑΔ. Το μακρύτερο πρόθεμα που ταιριάζει υπερισχύει της Eurostat. Συμπληρώστε size_eur (σε €) και πηγή.",
+  "markets": [
+    {"kad_prefix": "61", "name": "Τηλεπικοινωνίες", "size_eur": null, "year": null, "source": "π.χ. ΕΕΤΤ ετήσια έκθεση"},
+    {"kad_prefix": "43.21", "name": "Ηλεκτρολογικές / ασθενή ρεύματα", "size_eur": null, "year": null, "source": "π.χ. ICAP κλαδική μελέτη"},
+    {"kad_prefix": "46.52", "name": "Χονδρικό εμπόριο ηλεκτρονικού & τηλεπικοινωνιακού εξοπλισμού", "size_eur": null, "year": null, "source": ""},
+    {"kad_prefix": "62", "name": "Υπηρεσίες πληροφορικής / system integration", "size_eur": null, "year": null, "source": ""},
+    {"kad_prefix": "35.11", "name": "Παραγωγή ηλεκτρικής ενέργειας", "size_eur": null, "year": null, "source": ""},
+    {"kad_prefix": "68", "name": "Real estate", "size_eur": null, "year": null, "source": ""}
+  ]
+}

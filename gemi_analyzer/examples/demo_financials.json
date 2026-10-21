@@ -1,0 +1,17 @@
+{
+  "_note": "Φανταστικά δεδομένα για επίδειξη. Ποσά σε €.",
+  "years": [
+    {"year": 2021, "revenue": 3800000, "cost_of_sales": 2850000, "depreciation": 95000, "interest_expense": 60000, "ebt": 210000, "net_income": 160000,
+     "total_assets": 3100000, "current_assets": 2200000, "inventory": 420000, "receivables": 1150000, "cash": 380000,
+     "equity": 1050000, "retained_earnings": 420000, "long_term_liabilities": 600000, "current_liabilities": 1450000, "bank_debt": 900000, "employees": 28},
+    {"year": 2022, "revenue": 4400000, "cost_of_sales": 3250000, "depreciation": 110000, "interest_expense": 75000, "ebt": 330000, "net_income": 255000,
+     "total_assets": 3550000, "current_assets": 2550000, "inventory": 480000, "receivables": 1300000, "cash": 460000,
+     "equity": 1300000, "retained_earnings": 670000, "long_term_liabilities": 650000, "current_liabilities": 1600000, "bank_debt": 950000, "employees": 32},
+    {"year": 2023, "revenue": 5200000, "cost_of_sales": 3800000, "depreciation": 130000, "interest_expense": 90000, "ebt": 470000, "net_income": 365000,
+     "total_assets": 4300000, "current_assets": 3150000, "inventory": 560000, "receivables": 1750000, "cash": 520000,
+     "equity": 1660000, "retained_earnings": 1030000, "long_term_liabilities": 700000, "current_liabilities": 1940000, "bank_debt": 1100000, "employees": 37},
+    {"year": 2024, "revenue": 5650000, "cost_of_sales": 4180000, "depreciation": 150000, "interest_expense": 98000, "ebt": 505000, "net_income": 390000,
+     "total_assets": 4750000, "current_assets": 3450000, "inventory": 610000, "receivables": 2050000, "cash": 480000,
+     "equity": 2050000, "retained_earnings": 1420000, "long_term_liabilities": 750000, "current_liabilities": 1950000, "bank_debt": 1150000, "employees": 41}
+  ]
+}
