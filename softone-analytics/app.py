@@ -21,7 +21,7 @@ st.set_page_config(page_title="SoftOne Analytics", page_icon="📊", layout="wid
 # ------------------------------------------------------------------ helpers
 def eur(x: float) -> str:
     if abs(x) >= 1_000_000:
-        return f"€ {x / 1_000_000:.2f} εκ.".replace(".", ",")
+        return f"€ {x / 1_000_000:.2f}".replace(".", ",") + " εκ."
     return f"€ {x:,.0f}".replace(",", ".")
 
 
